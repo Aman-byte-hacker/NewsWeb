@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block style %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for z in entertainapi.articles %}
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+        
+                <img src="{{z.urlToImage}}" class="card-img-top" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title">{{z.title}}</h5>
+                    <p class="card-text">{{z.content}}</p>
+                    <a target="_news" href="{{z.url}}" class="btn btn-primary">READ MORE</a>
+                </div>
+            </div>
+        </div>
+        
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

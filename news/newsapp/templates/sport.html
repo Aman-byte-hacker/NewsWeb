@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block style %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for s in sportapi.articles %}
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+        
+                <img src="{{s.urlToImage}}" class="card-img-top" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title">{{s.title}}</h5>
+                    <p class="card-text">{{s.content}}</p>
+                    <a target="_news" href="{{s.url}}" class="btn btn-primary">READ MORE</a>
+                </div>
+            </div>
+        </div>
+        
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

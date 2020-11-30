@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for sc in scienceapi.articles %}
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+        
+                <img src="{{sc.urlToImage}}" class="card-img-top" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title">{{sc.title}}</h5>
+                    <p class="card-text">{{sc.content}}</p>
+                    <a target="_news" href="{{sc.url}}" class="btn btn-primary">READ MORE</a>
+                </div>
+            </div>
+        </div>
+        
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}
